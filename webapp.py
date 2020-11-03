@@ -38,14 +38,22 @@ def main():
     Total_Bilirubin=st.slider('Total_Bilirubin', 0.0, 75.0)
     Direct_Bilirubin=st.slider('Direct_Bilirubin', 0.0, 20.0)
     Alkaline_Phosphotase=st.slider('Alkaline_Phosphotase ', 0.0, 2100.0)
-    Alamine_Aminotransferase=st.slider('Aspartate_Aminotransferase ', 0.0, 5000.0)
+    Alamine_Aminotransferase=st.slider('Alamine_Aminotransferase ', 0.0, 2000.0)
+    Aspartate_Aminotransferase=st.slider('Aspartate_Aminotransferase ', 0.0, 5000.0)
     Total_Protiens=st.slider('Total_Protiens ', 0.0, 10.0)
     Albumin=st.slider('Albumin ', 0.0, 6.0)
     Albumin_and_Globulin_Ratio=st.slider('Albumin_and_Globulin_Ratio ', 0.0, 5.0)
     
+    if gender=="Female":
+        gender1=1
+        gender2=0
+    else:
+        gender1=0
+        gender2=1
+    
     
     inputs=[[age,gender,Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,
-            Total_Protiens,Albumin,Albumin_and_Globulin_Ratio]]
+             Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio,gender1,gender2]]
     
     if st.button('Classify'):
         if option=='Logistic Regression':
