@@ -19,7 +19,7 @@ svm=pickle.load(open('svm.pkl','rb'))
 
 def classify(num):
     if num==1: return "The Patient has liver disease";
-    else: return "The Patient has dont liver disease";
+    else : return "The Patient has dont liver disease";
 
 def main():
     st.title("Liver disease Predection")
@@ -35,14 +35,14 @@ def main():
     
     age=st.text_input("Enter  age")
     gender = st.radio("Gender",("Male","Female"))
-    Total_Bilirubin=st.slider('Total_Bilirubin', 0.0, 75.0)
-    Direct_Bilirubin=st.slider('Direct_Bilirubin', 0.0, 20.0)
-    Alkaline_Phosphotase=st.slider('Alkaline_Phosphotase ', 0.0, 2100.0)
-    Alamine_Aminotransferase=st.slider('Alamine_Aminotransferase ', 0.0, 2000.0)
-    Aspartate_Aminotransferase=st.slider('Aspartate_Aminotransferase ', 0.0, 5000.0)
-    Total_Protiens=st.slider('Total_Protiens ', 0.0, 10.0)
-    Albumin=st.slider('Albumin ', 0.0, 6.0)
-    Albumin_and_Globulin_Ratio=st.slider('Albumin_and_Globulin_Ratio ', 0.0, 5.0)
+    Total_Bilirubin=st.slider('Total_Bilirubin', 0, 75)
+    Direct_Bilirubin=st.slider('Direct_Bilirubin', 0, 20)
+    Alkaline_Phosphotase=st.slider('Alkaline_Phosphotase ', 0, 2100)
+    Alamine_Aminotransferase=st.slider('Alamine_Aminotransferase ', 0, 2000)
+    Aspartate_Aminotransferase=st.slider('Aspartate_Aminotransferase ', 0, 5000)
+    Total_Protiens=st.slider('Total_Protiens ', 0, 10)
+    Albumin=st.slider('Albumin ', 0, 6)
+    Albumin_and_Globulin_Ratio=st.slider('Albumin_and_Globulin_Ratio ', 0, 5)
     
     if gender=="Female":
         gender1=1
