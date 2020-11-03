@@ -18,8 +18,8 @@ svm=pickle.load(open('svm.pkl','rb'))
 
 
 def classify(num):
-    if num<1: return num*float(100);
-    else: return num;
+    if num==1: return "The Patient has liver disease";
+    else: return "The Patient has dont liver disease";
 
 def main():
     st.title("Liver disease Predection")
