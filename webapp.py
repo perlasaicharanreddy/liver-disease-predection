@@ -33,7 +33,7 @@ def main():
     option=st.sidebar.selectbox('Which model would you like to use?',activities)
     st.subheader(option)
     
-    age=st.text_input("Enter  age")
+    age=st.slider("Enter  age",1,100)
     gender = st.radio("Gender",("Male","Female"))
     Total_Bilirubin=st.slider('Total_Bilirubin', 0, 75)
     Direct_Bilirubin=st.slider('Direct_Bilirubin', 0, 20)
