@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[4]:
 
 
 import streamlit as st
-import pickle
+import pickle 
 
 
 log=pickle.load(open('log.pkl','rb'))
@@ -71,9 +71,9 @@ def main():
             st.success(classify(naivebayes.predict(inputs),t))
         elif option=='svm':
             st.success(classify(svm.predict(inputs),t))
-        elif option=='gb':
+        elif option=='Gradient Boosting':
             st.success(classify(gb.predict(inputs),t))
-        elif option=='neural':
+        elif option=='Neural networks':
             st.success(classify(neural.predict(inputs),t))
         
 
