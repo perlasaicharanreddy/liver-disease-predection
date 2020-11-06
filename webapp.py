@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[5]:
 
 
 import streamlit as st
@@ -14,9 +14,8 @@ decisiontree=pickle.load(open('decisiontree.pkl','rb'))
 randomforest=pickle.load(open('randomforest.pkl','rb'))
 naivebayes=pickle.load(open('navebais.pkl','rb'))
 svm=pickle.load(open('svm.pkl','rb'))
-gb=pickle.load(open('gb.pkl','rb'))
+gbost=pickle.load(open('gbost.pkl','rb'))
 neural=pickle.load(open('neural.pkl','rb'))
-
 
 
 def classify(num,t):
@@ -72,7 +71,7 @@ def main():
         elif option=='svm':
             st.success(classify(svm.predict(inputs),t))
         elif option=='Gradient Boosting':
-            st.success(classify(gb.predict(inputs),t))
+            st.success(classify(gbost.predict(inputs),t))
         elif option=='Neural networks':
             st.success(classify(neural.predict(inputs),t))
         
