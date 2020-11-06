@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[6]:
 
 
 import streamlit as st
@@ -14,7 +14,6 @@ decisiontree=pickle.load(open('decisiontree.pkl','rb'))
 randomforest=pickle.load(open('randomforest.pkl','rb'))
 naivebayes=pickle.load(open('navebais.pkl','rb'))
 svm=pickle.load(open('svm.pkl','rb'))
-gbost=pickle.load(open('gbost.pkl','rb'))
 neural=pickle.load(open('neural.pkl','rb'))
 
 
@@ -30,7 +29,7 @@ def main():
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
-    activities=['Logistic Regression','KNN','Decision tree','Random forest','naive bayes','SVM','Gradient Boosting','Neural networks']
+    activities=['Logistic Regression','KNN','Decision tree','Random forest','naive bayes','SVM','Neural networks']
     option=st.sidebar.selectbox('Which model would you like to use?',activities)
     st.subheader(option)
     
@@ -70,8 +69,6 @@ def main():
             st.success(classify(naivebayes.predict(inputs),t))
         elif option=='svm':
             st.success(classify(svm.predict(inputs),t))
-        elif option=='Gradient Boosting':
-            st.success(classify(gbost.predict(inputs),t))
         elif option=='Neural networks':
             st.success(classify(neural.predict(inputs),t))
         
