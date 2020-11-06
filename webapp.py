@@ -54,7 +54,7 @@ def main():
     
     inputs=[[age,Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,
              Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio,gender1,gender2]]
-    t=Total_Bilirubin>50 and (ag and e!=1 and Total_Bilirubin!=0 and Direct_Bilirubin!=0 and Alkaline_Phosphotase!=0 and 1=0
+    t=Total_Bilirubin>50 and (ag and e!=1 and Total_Bilirubin!=0 and Direct_Bilirubin!=0 and Alkaline_Phosphotase!=0
                            and Aspartate_Aminotransferase!=0 and Total_Protiens!=0 and Albumin!=0 and Albumin_and_Globulin_Ratio!=0)
     if st.button('Classify'):
         if option=='Logistic Regression':
