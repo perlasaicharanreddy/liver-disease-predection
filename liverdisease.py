@@ -1,65 +1,65 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# # Liver Disease predection
+
+# In[ ]:
 
 
-# Logestic Regression correct
+#importing built in modules
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+#matplotlib inline
 
 
 # In[2]:
 
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-get_ipython().run_line_magic('matplotlib', 'inline')
+#Loading Data
+df=pd.read_csv(r"C:\Users\charan\Desktop\indian_liver_patient.csv")
 
 
 # In[3]:
 
 
-df=pd.read_csv(r"C:\Users\charan\Desktop\indian_liver_patient.csv")
+df.shape
 
 
 # In[4]:
 
 
-df.shape
+df.columns
 
 
 # In[5]:
 
 
-df.columns
+df.head()
 
 
 # In[6]:
 
 
-df.head()
-
-
-# In[7]:
-
-
 df.describe()
 
 
-# In[8]:
+#  # pre-processing  data
+
+# In[7]:
 
 
 df.isnull().any().any()
 
 
-# In[9]:
+# In[8]:
 
 
 df.isnull().any()
 
 
-# In[10]:
+# In[9]:
 
 
 sns.countplot(data=df, x = 'Dataset', label='Count')
@@ -69,7 +69,7 @@ print('Number of patients diagnosed with liver disease: ',LD)
 print('Number of patients not diagnosed with liver disease: ',NLD)
 
 
-# In[11]:
+# In[10]:
 
 
 sns.countplot(data=df, x = 'Gender', label='Count')
@@ -82,33 +82,25 @@ print('Number of patients that are male: ',F)
 # In[12]:
 
 
-import seaborn as sns
-sns.pairplot(df,hue='Dataset')
-#sns.pairplot(df,hue='Dataset',x_vars=['Age','Total_Bilirubin','Direct_Bilirubin','Alkaline_Phosphotase','Alamine_Aminotransferase','Aspartate_Aminotransferase','Total_Protiens','Albumin','Albumin_and_Globulin_Ratio','Gender_Female','Gender_Male'],y_vars=['Dataset'])
-
-
-# In[13]:
-
-
 # Create separate object for target variable
 y = df.Dataset
 # Create separate object for input features
 df = df.drop('Dataset', axis=1)
 
 
-# In[14]:
+# In[13]:
 
 
 df.head()
 
 
-# In[15]:
+# In[14]:
 
 
 y.head()
 
 
-# In[16]:
+# In[15]:
 
 
 df_2=pd.get_dummies(df, columns=["Gender"],drop_first=False)
@@ -127,13 +119,9 @@ df_2
 
 
 
-# In[ ]:
+# ## Feature scalling
 
-
-
-
-
-# In[17]:
+# In[16]:
 
 
 # Scale down the values  using normalization between (0-1)
@@ -146,26 +134,22 @@ x_scaled=min_max_scaler.fit_transform(x)
 df=pd.DataFrame(x_scaled)
 
 
-# In[18]:
+# In[17]:
 
 
 df
 
 
-# In[19]:
+# In[18]:
 
 
 df.fillna(df.mean(),inplace=True)
 df
 
 
-# In[ ]:
+# ### Splitting the data into training samples and testing samples
 
-
-
-
-
-# In[20]:
+# In[19]:
 
 
 X=df.values
@@ -173,16 +157,19 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2,random_state=42)
 
 
+# In[20]:
+
+
+print("X-train =",X_train.shape,"  Y-train =", y_train.shape)
+print("X-test  =", X_test.shape,"  Y-test  =", y_test.shape)
+
+
+# # Logestic Regression
+
 # In[21]:
 
 
-print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-
-
-# In[22]:
-
-
-from sklearn.datasets import load_iris
+#from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
 clf=LogisticRegression(random_state=0,solver='lbfgs',multi_class='multinomial',max_iter=10000)
 clf.fit(X_train,y_train)
@@ -191,51 +178,41 @@ clf.fit(X_train,y_train)
 # In[23]:
 
 
-clf.score(X_test,y_test)
+y_pred=clf.predict(X_test)
 
 
 # In[24]:
 
 
-y_pred=clf.predict(X_test)
+y_pred
 
 
 # In[25]:
 
 
-y_pred
+y_test
 
 
-# In[26]:
-
-
-s=y_test
-s
-
-
-# In[27]:
+# In[77]:
 
 
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 confusionmatrix=metrics.confusion_matrix(y_test,y_pred)
-print("accuracy",accuracy)     # accuracy=no of correct predections/total no of predections made
-print("confusion matrix\n",confusionmatrix) #
+print("accuracy=",accuracy*100)     # accuracy=no of correct predections/total no of predections made
+
+print("Confusion matrix:\n", confusionmatrix)
 
 
-# In[28]:
+# In[ ]:
 
 
-# Logestic Regression end
 
 
-# In[29]:
 
+# # KNN 
 
-# KNN Start
-
-
-# In[30]:
+# In[27]:
 
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -260,25 +237,25 @@ optimal_k = neighbors[MSE.index(min(MSE))]
 print('\nThe optimal number of neighbors is %d.' % optimal_k)
 
 
-# In[31]:
+# In[28]:
 
 
 MSE
 
 
-# In[32]:
+# In[29]:
 
 
 cv_scores
 
 
-# In[33]:
+# In[30]:
 
 
 MSE.index(min(MSE))
 
 
-# In[34]:
+# In[31]:
 
 
 # plot misclassification error vs k 
@@ -288,7 +265,7 @@ plt.ylabel('accuracy')
 plt.show()
 
 
-# In[35]:
+# In[32]:
 
 
 # plot misclassification error vs k 
@@ -298,75 +275,71 @@ plt.ylabel('Misclassification Error')
 plt.show()
 
 
-# In[36]:
+# In[33]:
 
 
 classifier = KNeighborsClassifier(n_neighbors = optimal_k)
 classifier.fit(X_train, y_train)
 
 
-# In[37]:
+# In[34]:
 
 
 y_pred = classifier.predict(X_test)
 
 
-# In[38]:
+# In[79]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) * float(100)  ## get the accuracy on testing data
-acc
+print("accuracy= ",acc)
 
 
-# In[39]:
+# In[80]:
 
 
 cnf=metrics.confusion_matrix(y_test,y_pred)
-cnf
+print("Confusion matrix:\n", cnf)
 
 
-# In[40]:
+# In[ ]:
 
 
-#knn end
 
 
-# In[41]:
+
+# # Decision Tree 
+
+# In[37]:
 
 
-#decision tree classifier using gini impurity (CART): 
-
-
-# In[42]:
-
-
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier    # decision tree classifier using gini impurity (CART): 
 dtclf=DecisionTreeClassifier() 
 #dtclf=DecisionTreeClassifier(criterion='entropy') 
 dtclf.fit(X_train,y_train)
 
 
-# In[43]:
+# In[38]:
 
 
 y_pred = dtclf.predict(X_test)
 
 
-# In[44]:
+# In[39]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) * float(100)  ## get the accuracy on testing data
-acc
+print("accuracy= ",acc)
 
 
-# In[45]:
+# In[81]:
 
 
 cnf=metrics.confusion_matrix(y_test,y_pred)
-print(cnf)
+print("Confusion matrix:\n", cnf)
 
 
-# In[46]:
+# In[41]:
 
 
 # from sklearn.externals.six import StringIO
@@ -375,13 +348,9 @@ print(cnf)
 # import pydotplus
 
 
-# In[47]:
+# # Random forest
 
-
-#Random forest
-
-
-# In[48]:
+# In[42]:
 
 
 from sklearn.ensemble import RandomForestClassifier
@@ -392,19 +361,19 @@ rfclf.fit(X_train,y_train)
 y_pred = rfclf.predict(X_test)
 
 
-# In[49]:
+# In[82]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) * float(100) 
-acc
+print("accuracy= ",acc)
 
 
-# In[50]:
+# In[84]:
 
 
 mse=mean_squared_error(y_test, y_pred)   # mse=1/n(y-y^)^2
 msd=sqrt(mse)
-print(mse,msd)
+print("mean square error=",mse,"\nmean square deviation=",msd)
 
 
 # In[ ]:
@@ -413,13 +382,9 @@ print(mse,msd)
 
 
 
-# In[51]:
+# # Navebias
 
-
-#Navebias
-
-
-# In[52]:
+# In[45]:
 
 
 from sklearn.naive_bayes import MultinomialNB
@@ -431,35 +396,39 @@ nbclf.fit(X_train,y_train)
 y_pred = nbclf.predict(X_test)
 
 
-# In[53]:
+# In[85]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) 
 mse=mean_squared_error(y_test, y_pred) # mse=1/n(y-y^)^2
 msd=sqrt(mse) 
-print(acc,mse,msd)
+print("accuracy= ",acc)
+print("mean square error=",mse,"\nmean square deviation=",msd)
 
 
-# In[54]:
+# # Suport vector machine
 
-
-#Suport vector machine
-
-
-# In[55]:
+# In[47]:
 
 
 from sklearn import svm
-svmclf=svm.SVC(kernel='rbf',gamma='auto',probability=True)
+svmclf=svm.SVC(kernel='rbf',gamma='auto',decision_function_shape='ovo',probability=True)
 svmclf.fit(X_train,y_train)
 y_pred = svmclf.predict(X_test)
 
 
-# In[56]:
+# In[87]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred)
-acc
+print("accuracy= ",acc*100)
+
+
+# In[88]:
+
+
+cnf=metrics.confusion_matrix(y_test,y_pred)
+print("Confusion matrix:\n", cnf)
 
 
 # In[ ]:
@@ -468,22 +437,13 @@ acc
 
 
 
-# In[57]:
+# In[ ]:
 
 
-#import seaborn as sns
-#sns.pairplot(df,hue='Dataset')
 
 
-# In[58]:
 
-
-import pickle
-#pickle.dump(clf,open('log.pkl','wb'))
-#model=pickle.load(open('model.pkl','rb'))
-
-
-# In[59]:
+# In[50]:
 
 
 pickle.dump(clf,open('log.pkl','wb'))
@@ -492,12 +452,6 @@ pickle.dump(dtclf,open('decisiontree.pkl','wb'))
 pickle.dump(rfclf,open('randomforest.pkl','wb'))
 pickle.dump(nbclf,open('navebais.pkl','wb'))
 pickle.dump(svmclf,open('svm.pkl','wb'))
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:

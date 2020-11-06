@@ -17,9 +17,9 @@ svm=pickle.load(open('svm.pkl','rb'))
 
 
 
-def classify(num):
-    if num==1: return "The Patient has liver disease";
-    else : return "The Patient has dont liver disease";
+def classify(num,t):
+    if num==1&&t==1: return "The Patient is likely has liver disease";
+    else : return "The Patient  is likely not having liver disease";
 
 def main():
     st.title("Liver disease Predection")
@@ -54,20 +54,21 @@ def main():
     
     inputs=[[age,Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,
              Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio,gender1,gender2]]
-    
+    t=Total_Bilirubin>50&&(age!=1&&Total_Bilirubin!=0&&Direct_Bilirubin!=0&&Alkaline_Phosphotase!=0&&1=0
+                          &&Aspartate_Aminotransferase!=0&&Total_Protiens!=0&&Albumin!=0&&Albumin_and_Globulin_Ratio!=0)
     if st.button('Classify'):
         if option=='Logistic Regression':
-            st.success(classify(log.predict(inputs)))
+            st.success(classify(log.predict(inputs,t)))
         elif option=='KNN':
-            st.success(classify(knn.predict(inputs)))
+            st.success(classify(knn.predict(inputs),t))
         elif option=='Decision tree':
-            st.success(classify(decisiontree.predict(inputs)))
+            st.success(classify(decisiontree.predict(inputs),t))
         elif option=='Random forest':
-            st.success(classify(randomforest.predict(inputs)))
+            st.success(classify(randomforest.predict(inputs),t))
         elif option=='naive bayes':
-            st.success(classify(naivebayes.predict(inputs)))
+            st.success(classify(naivebayes.predict(inputs),t))
         else:
-            st.success(classify(svm.predict(inputs)))
+            st.success(classify(svm.predict(inputs),t))
 
 
 if __name__=='__main__':
