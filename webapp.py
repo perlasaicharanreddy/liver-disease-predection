@@ -18,7 +18,7 @@ svm=pickle.load(open('svm.pkl','rb'))
 
 
 def classify(num,t):
-    if num==1&&t==1: return "The Patient is likely has liver disease";
+    if (num==1 and t==1): return "The Patient is likely has liver disease";
     else : return "The Patient  is likely not having liver disease";
 
 def main():
@@ -58,7 +58,7 @@ def main():
                           &&Aspartate_Aminotransferase!=0&&Total_Protiens!=0&&Albumin!=0&&Albumin_and_Globulin_Ratio!=0)
     if st.button('Classify'):
         if option=='Logistic Regression':
-            st.success(classify(log.predict(inputs,t)))
+            st.success(classify(log.predict(inputs),t))
         elif option=='KNN':
             st.success(classify(knn.predict(inputs),t))
         elif option=='Decision tree':
