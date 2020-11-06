@@ -3,7 +3,7 @@
 
 # # Liver Disease predection
 
-# In[ ]:
+# In[1]:
 
 
 #importing built in modules
@@ -11,7 +11,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-#matplotlib inline
 
 
 # In[2]:
@@ -79,7 +78,7 @@ print('Number of patients that are female: ',M)
 print('Number of patients that are male: ',F)
 
 
-# In[12]:
+# In[11]:
 
 
 # Create separate object for target variable
@@ -88,19 +87,19 @@ y = df.Dataset
 df = df.drop('Dataset', axis=1)
 
 
-# In[13]:
+# In[12]:
 
 
 df.head()
 
 
-# In[14]:
+# In[13]:
 
 
 y.head()
 
 
-# In[15]:
+# In[14]:
 
 
 df_2=pd.get_dummies(df, columns=["Gender"],drop_first=False)
@@ -121,7 +120,7 @@ df_2
 
 # ## Feature scalling
 
-# In[16]:
+# In[15]:
 
 
 # Scale down the values  using normalization between (0-1)
@@ -134,13 +133,13 @@ x_scaled=min_max_scaler.fit_transform(x)
 df=pd.DataFrame(x_scaled)
 
 
-# In[17]:
+# In[16]:
 
 
 df
 
 
-# In[18]:
+# In[17]:
 
 
 df.fillna(df.mean(),inplace=True)
@@ -149,7 +148,7 @@ df
 
 # ### Splitting the data into training samples and testing samples
 
-# In[19]:
+# In[18]:
 
 
 X=df.values
@@ -157,7 +156,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2,random_state=42)
 
 
-# In[20]:
+# In[19]:
 
 
 print("X-train =",X_train.shape,"  Y-train =", y_train.shape)
@@ -166,7 +165,7 @@ print("X-test  =", X_test.shape,"  Y-test  =", y_test.shape)
 
 # # Logestic Regression
 
-# In[21]:
+# In[20]:
 
 
 #from sklearn.datasets import load_iris
@@ -175,31 +174,31 @@ clf=LogisticRegression(random_state=0,solver='lbfgs',multi_class='multinomial',m
 clf.fit(X_train,y_train)
 
 
-# In[23]:
+# In[21]:
 
 
 y_pred=clf.predict(X_test)
 
 
-# In[24]:
+# In[22]:
 
 
 y_pred
 
 
-# In[25]:
+# In[23]:
 
 
 y_test
 
 
-# In[77]:
+# In[24]:
 
 
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 confusionmatrix=metrics.confusion_matrix(y_test,y_pred)
-print("accuracy=",accuracy*100)     # accuracy=no of correct predections/total no of predections made
+print("accuracy= ",round(accuracy,2))     # accuracy=no of correct predections/total no of predections made
 
 print("Confusion matrix:\n", confusionmatrix)
 
@@ -212,7 +211,7 @@ print("Confusion matrix:\n", confusionmatrix)
 
 # # KNN 
 
-# In[27]:
+# In[25]:
 
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -237,25 +236,25 @@ optimal_k = neighbors[MSE.index(min(MSE))]
 print('\nThe optimal number of neighbors is %d.' % optimal_k)
 
 
-# In[28]:
+# In[26]:
 
 
 MSE
 
 
-# In[29]:
+# In[27]:
 
 
 cv_scores
 
 
-# In[30]:
+# In[28]:
 
 
 MSE.index(min(MSE))
 
 
-# In[31]:
+# In[29]:
 
 
 # plot misclassification error vs k 
@@ -265,7 +264,7 @@ plt.ylabel('accuracy')
 plt.show()
 
 
-# In[32]:
+# In[30]:
 
 
 # plot misclassification error vs k 
@@ -275,27 +274,27 @@ plt.ylabel('Misclassification Error')
 plt.show()
 
 
-# In[33]:
+# In[31]:
 
 
 classifier = KNeighborsClassifier(n_neighbors = optimal_k)
 classifier.fit(X_train, y_train)
 
 
-# In[34]:
+# In[32]:
 
 
 y_pred = classifier.predict(X_test)
 
 
-# In[79]:
+# In[33]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) * float(100)  ## get the accuracy on testing data
-print("accuracy= ",acc)
+print("accuracy= ",round(acc,2))
 
 
-# In[80]:
+# In[34]:
 
 
 cnf=metrics.confusion_matrix(y_test,y_pred)
@@ -310,7 +309,7 @@ print("Confusion matrix:\n", cnf)
 
 # # Decision Tree 
 
-# In[37]:
+# In[35]:
 
 
 from sklearn.tree import DecisionTreeClassifier    # decision tree classifier using gini impurity (CART): 
@@ -319,27 +318,27 @@ dtclf=DecisionTreeClassifier()
 dtclf.fit(X_train,y_train)
 
 
-# In[38]:
+# In[36]:
 
 
 y_pred = dtclf.predict(X_test)
 
 
-# In[39]:
+# In[37]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) * float(100)  ## get the accuracy on testing data
-print("accuracy= ",acc)
+print("accuracy= ",round(acc,2))
 
 
-# In[81]:
+# In[38]:
 
 
 cnf=metrics.confusion_matrix(y_test,y_pred)
 print("Confusion matrix:\n", cnf)
 
 
-# In[41]:
+# In[39]:
 
 
 # from sklearn.externals.six import StringIO
@@ -350,7 +349,7 @@ print("Confusion matrix:\n", cnf)
 
 # # Random forest
 
-# In[42]:
+# In[40]:
 
 
 from sklearn.ensemble import RandomForestClassifier
@@ -361,14 +360,14 @@ rfclf.fit(X_train,y_train)
 y_pred = rfclf.predict(X_test)
 
 
-# In[82]:
+# In[41]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) * float(100) 
 print("accuracy= ",acc)
 
 
-# In[84]:
+# In[42]:
 
 
 mse=mean_squared_error(y_test, y_pred)   # mse=1/n(y-y^)^2
@@ -384,7 +383,7 @@ print("mean square error=",mse,"\nmean square deviation=",msd)
 
 # # Navebias
 
-# In[45]:
+# In[43]:
 
 
 from sklearn.naive_bayes import MultinomialNB
@@ -396,7 +395,7 @@ nbclf.fit(X_train,y_train)
 y_pred = nbclf.predict(X_test)
 
 
-# In[85]:
+# In[44]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred) 
@@ -408,7 +407,7 @@ print("mean square error=",mse,"\nmean square deviation=",msd)
 
 # # Suport vector machine
 
-# In[47]:
+# In[45]:
 
 
 from sklearn import svm
@@ -417,14 +416,14 @@ svmclf.fit(X_train,y_train)
 y_pred = svmclf.predict(X_test)
 
 
-# In[87]:
+# In[46]:
 
 
 acc = metrics.accuracy_score(y_test, y_pred)
 print("accuracy= ",acc*100)
 
 
-# In[88]:
+# In[47]:
 
 
 cnf=metrics.confusion_matrix(y_test,y_pred)
@@ -437,13 +436,54 @@ print("Confusion matrix:\n", cnf)
 
 
 
+# In[49]:
+
+
+from sklearn.ensemble import GradientBoostingClassifier
+# Create Gradient Boosting Classifier object
+gbclass = GradientBoostingClassifier()
+gbclass.fit(X_train, y_train)
+#Predict Output
+y_pred= gbclass.predict(X_test)
+gbclass_score_test = round(gbclass.score(X_test, y_test) * 100, 2)
+print('Test Score: \n', gbclass_score_test)
+print('Accuracy: \n', round(metrics.accuracy_score(y_test,y_pred)*100,2))
+print(metrics.confusion_matrix(y_pred,y_test))
+
+
+# In[51]:
+
+
+# Neural Networks# Neural 
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report,confusion_matrix
+
+neural = MLPClassifier(max_iter=350)
+neural.fit(X_train, y_train)
+#Predict Output
+y_pred = neural.predict(X_test)
+
+neural_score_test = round(neural.score(X_test, y_test) * 100, 2)
+print('Neural Test Score: \n', neural_score_test)
+print('Accuracy: \n', accuracy_score(y_test, y_pred))
+print(confusion_matrix(y_pred,y_test))
+
+
 # In[ ]:
 
 
 
 
 
-# In[50]:
+# In[ ]:
+
+
+
+
+
+# In[ ]:
 
 
 pickle.dump(clf,open('log.pkl','wb'))
@@ -452,6 +492,8 @@ pickle.dump(dtclf,open('decisiontree.pkl','wb'))
 pickle.dump(rfclf,open('randomforest.pkl','wb'))
 pickle.dump(nbclf,open('navebais.pkl','wb'))
 pickle.dump(svmclf,open('svm.pkl','wb'))
+pickle.dump(gbclass,open('gb.pkl','wb'))
+pickle.dump(neural,open('neural.pkl','wb'))
 
 
 # In[ ]:

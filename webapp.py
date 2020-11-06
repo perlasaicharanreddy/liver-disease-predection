@@ -14,6 +14,8 @@ decisiontree=pickle.load(open('decisiontree.pkl','rb'))
 randomforest=pickle.load(open('randomforest.pkl','rb'))
 naivebayes=pickle.load(open('navebais.pkl','rb'))
 svm=pickle.load(open('svm.pkl','rb'))
+gb=pickle.load(open('gb.pkl','rb'))
+neural=pickle.load(open('neural.pkl','rb'))
 
 
 
@@ -29,7 +31,7 @@ def main():
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
-    activities=['Logistic Regression','KNN','Decision tree','Random forest','naive bayes','SVM']
+    activities=['Logistic Regression','KNN','Decision tree','Random forest','naive bayes','SVM','Gradient Boosting','Neural networks']
     option=st.sidebar.selectbox('Which model would you like to use?',activities)
     st.subheader(option)
     
@@ -54,8 +56,8 @@ def main():
     
     inputs=[[age,Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,
              Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio,gender1,gender2]]
-    t=Total_Bilirubin>50 and (age!=0 and Total_Bilirubin!=0 and Direct_Bilirubin!=0 and Alkaline_Phosphotase!=0
-                           and Aspartate_Aminotransferase!=0 and Total_Protiens!=0 and Albumin!=0 and Albumin_and_Globulin_Ratio!=0)
+    t=(age!=0 and Total_Bilirubin!=0 and Direct_Bilirubin!=0 and Alkaline_Phosphotase!=0
+      and Aspartate_Aminotransferase!=0 and Total_Protiens!=0 and Albumin!=0 and Albumin_and_Globulin_Ratio!=0 and Total_Bilirubin>50)
     if st.button('Classify'):
         if option=='Logistic Regression':
             st.success(classify(log.predict(inputs),t))
@@ -67,8 +69,13 @@ def main():
             st.success(classify(randomforest.predict(inputs),t))
         elif option=='naive bayes':
             st.success(classify(naivebayes.predict(inputs),t))
-        else:
+        elif option=='svm':
             st.success(classify(svm.predict(inputs),t))
+        elif option=='gb':
+            st.success(classify(gb.predict(inputs),t))
+        elif option=='neural':
+            st.success(classify(neural.predict(inputs),t))
+        
 
 
 if __name__=='__main__':
