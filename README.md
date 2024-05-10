@@ -1,10 +1,10 @@
-﻿**Liver Disease Prediction Using Supervised**  
+﻿# Liver Disease Prediction Using Supervised  
 
 **1.INTRODUCTION** 
 
 **OVERVIEW OF TECHNOLOGIES**  
 
-**Introduction for Python**  
+1.Introduction for Python  
 
 Python  is  a  very  powerful  programming  language  used  for  many  different applications. Over time, the huge community around this open source language has created quite a few tools to efficiently work with Python. In recent years, a number of tools have been built specifically for data science. As a result, analysing data with Python has never been easier. Python is a programming language that lets you work quickly and integrate systems more efficiently. There are two major Python versions- Python 2 and Python 3.  
 
@@ -14,7 +14,7 @@ Many other paradigms are supported via extensions, including design by contract 
 
 The standard library has  two modules (itertools and functools) that  implement functional tools borrowed from Haskell and Standard ML. Python is meant to be an easily  readable  language.  Its  formatting  is  visually  uncluttered,  and  it  often  uses English  keywords  where  other  languages  use  punctuation.  Unlike  many  other languages,  it  does  not  use  curly  brackets  to  delimit  blocks,  and  semicolons  after statements are optional. It has fewer syntactic exceptions and special cases than C or Pascal 
 
- **Introduction for Machine learning** 
+ 2.Introduction for Machine learning 
 
 AI Machine learning  is the scientific study of algorithms and statistical models that computer systems use in order to perform a specific task effectively without using explicit instructions, relying on patterns and inference instead. It is seen as a subset of artificial intelligence. Machine learning algorithms build a mathematical model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to perform the task. Machine learning algorithms are used in a wide variety of applications, such as email filtering, and computer vision, where it is infeasible to develop an algorithm of specific instructions for performing the task. Machine learning is closely related to computational statistics, which focuses on making predictions using computers. 
 
@@ -25,6 +25,7 @@ Classification algorithms are used when the outputs are restricted to a limited 
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
 
  **Machine Learning Types** 
+ 
  **Supervised Learning :** 
 
 In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and output. 
@@ -119,7 +120,7 @@ This strategy used for liver disease prediction
 
 **STRUCTURE OF PROJECT (SYSTEM ANALYSIS)** 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.002.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.002.jpg)
 
 Fig: 1.1 Project SDLC 
 
@@ -271,7 +272,7 @@ Minimum hardware requirements are very dependent on the particular software bein
 •	Hard disk 			: minimum 250GB
 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.003.png)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.003.jng)
 
 Fig 3.1 Dataset 
 
@@ -330,8 +331,7 @@ Actor: Actor represents the role a user plays with respect to the system. An act
 
 Graphical representation: 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.006.png)  
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.007.png)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.006.png)  ![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.007.png)
 ![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.008.png)
 
 Actor
@@ -588,7 +588,7 @@ Fig 4.1: Class Diagram
 
 A use case diagram at its simplest is a representation of a user's interaction with the system and depicting the specifications of a use case. A use case diagram can portray the different types of users of a system and the various ways that they interact with the system. This type of diagram is typically used in conjunction with the textual use case and will often be accompanied by other types of diagrams as well.  
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.011.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.011.png)
 
 Fig 4.2: Usecase diagram 
 
@@ -597,7 +597,7 @@ Fig 4.2: Usecase diagram
 
 A sequence diagram is a kind of interaction diagram that shows how processes operate with one another and in what order. It is a construct of a Message Sequence Chart. A sequence diagram shows object interactions arranged in time sequence. It depicts the objects and classes involved in the scenario and the sequence of messages exchanged between the objects needed to carry out the functionality of the scenario. Sequence diagrams are typically associated with use case realizations in the Logical View of the system under development. Sequence diagrams are sometimes called event diagrams, event scenarios, and timing diagrams. 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.012.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.012.png)
 
 Fig 4.3:Sequence diagram 
 
@@ -605,7 +605,7 @@ Fig 4.3:Sequence diagram
 
 State chart diagram describes the flow of control from one state to another state. States are defined as a condition in which an object exists and it changes when some event is triggered. The most important purpose of State chart diagram is to model lifetime of an object from creation to termination. 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.013.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.013.png)
 
 Fig 4.4:State chart diagram 
 
@@ -629,7 +629,7 @@ Fig 4.6:Data flow Diagram
 
 The machine  learning  architecture defines  the  various  layers  involved  in the machine  learning cycle  and  involves  the  major  steps  being  carried  out  in  the transformation of raw data into training data sets capable for enabling the decision making of a system. 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.016.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.016.png)
 
 Fig 4.7:Architecture diagram 
 
@@ -665,7 +665,7 @@ Decision  Tree  is  a Supervised  learning  technique that  can  be  used  for  
 
 In a Decision tree, there are two nodes, which are the Decision Node and Leaf Node. Decision nodes are used to make any decision and have multiple branches, whereas Leaf nodes are the output of those decisions and do not contain any further branches.                      
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.020.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.020.png)
 
 Fig 5.3 Decision Tree 
 
@@ -689,7 +689,7 @@ Fig 5.4 SVM
 
 The structure of the human brain inspires a Neural Network. It is essentially a Machine  Learning  model  (more  precisely,  Deep  Learning)  that  is  used  in unsupervised learning. A Neural Network is a web of interconnected entities known as nodes wherein each node is responsible for a simple computation. In this way, a Neural Network functions similarly to the neurons in the human brain 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.022.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.022.jpg)
 
 `  `Fig 5.5 Neural Networks 
 
@@ -925,7 +925,7 @@ Functional testing conducted to evaluate the compliance of a system or component
 
 Blackbox testing is testing the functionality of an application without knowing  the  details  of  its  implementation  including  internal  program structure, data structures etc. Test cases for black box testing are created based  on  the  requirement  specifications.  Therefore,  it  is  also  called  as specification-based testing. Fig.4.1 represents the black box testing: 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.023.png)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.025.jpg)
 
 Fig.6.1:Black Box Testing 
 
@@ -933,7 +933,7 @@ When applied to machine  learning models, black  box testing would mean testing 
 
 model,  the  algorithm  used  to  create  the  model  etc.  The  challenge, however, is to verify the test outcome against the expected values that are known beforehand. 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.024.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.026.jpg)
 
 Fig.6.2:Black Box Testing for Machine Learning algorithms 
 
@@ -949,7 +949,7 @@ Fig.6.3:Black box Testing
 
 The model gives out the correct output when different inputs are given which are mentioned in Table 6.3. Therefore the program is said to be executed as expected or correct program 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.025.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.027.png)
 
 Fig 6.4 Testing 
 
@@ -985,13 +985,11 @@ F1 Score = 2\*(Recall \* Precision) / (Recall + Precision)
 
 A confusion matrix is a tabular summary of the number of correct and incorrect predictions  made  by  a  classifier.  It  is  used  to  measure  the  performance  of  a classification model. 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.026.png)
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.027.png)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.028.png)
  
  Fig 6.5 Confusion Matrix 
  
- ![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.028.png)
 
 True Positive (TP): The result of prediction correctly identifies that a patient has liver disease.  
 
@@ -1025,19 +1023,19 @@ Fig 6.6 Metrics Table
 
 1.**Import required package and extracting the data set 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.030.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.030.png)
 
 Fig.7.1 import modules 
 
 2. **Data Processing 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.031.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.031.png)
 
 Fig.7.2 Data Processing 
 
 3. **Data Visualization  
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.032.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.032.png)
 
 Fig.7.3 Data visualization 
 
@@ -1093,11 +1091,11 @@ Fig.7.10 Neural Networks
 
 Fig.7.11 Knn
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.041.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.041.png)
 
 Fig.7.12. Output 
 
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.042.jpeg)
+![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.042.png)
 
 Fig.7.13. Output
 
