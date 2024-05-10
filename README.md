@@ -1,4 +1,4 @@
-﻿# Liver Disease Prediction Using Supervised  
+﻿# Liver Disease Prediction  
 
 **1.INTRODUCTION** 
 
