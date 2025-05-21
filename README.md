@@ -1,4 +1,84 @@
-﻿# Liver Disease Prediction  
+﻿# Liver Disease Prediction
+
+![Project Banner](ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.002.jpg)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+Liver Disease Prediction is a machine learning project aimed at predicting the likelihood of liver disease in patients based on their medical data. The project uses various machine learning algorithms and is deployed as a web application using Streamlit and Heroku.
+
+## Features
+- Predicts liver disease likelihood using multiple machine learning models.
+- User-friendly web interface for data input and prediction.
+- Supports Logistic Regression, KNN, Decision Tree, Random Forest, SVM, and Neural Networks.
+- Deployed on Heroku for easy access.
+
+## Technologies Used
+- **Programming Language**: Python
+- **Libraries**: NumPy, Pandas, Scikit-learn, Streamlit
+- **Deployment**: Heroku
+- **Data Source**: UCI Machine Learning Repository (Indian Liver Patient Dataset)
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/liver-disease-prediction.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd liver-disease-prediction
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the application:
+   ```bash
+   streamlit run src/webapp.py
+   ```
+
+## Usage
+1. Open the web application in your browser.
+2. Input patient data such as age, gender, and medical test results.
+3. Select a machine learning model from the sidebar.
+4. Click "Classify" to get the prediction.
+
+## Screenshots
+### Web Application Interface
+![Web App](ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.042.png)
+
+### Data Visualization
+![Data Visualization](ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.033.png)
+
+## Contributing
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Liver Disease Prediction  
 
 **1.INTRODUCTION** 
 
@@ -162,7 +242,7 @@ The Maintenance of our Project is one-time process only
 
 8. **NON FUNCTIONAL REQUIREMENTS** 
 
-NON-FUNCTIONAL REQUIREMENT (NFR) specifies the quality attribute of a software system. They judge the software system based on Responsiveness, Usability, Security, Portability and other non-functional standards that are critical to the success of the software system. Example of nonfunctional requirement, “how fast does the website load?” Failing to meet non-functional requirements can result in systems that fail  to  satisfy  user  needs.  Non-  functional  Requirements  allows  you  to  impose constraints  or  restrictions  on  the  design  of  the  system  across  the  various  agile backlogs.  Example,  the  site  should  load  in  3  seconds  when  the  number  of simultaneous users are > 10000. Description of non-functional requirements is just as critical as a functional requirement. 
+NON-FUNCTIONAL REQUIREMENT (NFR) specifies the quality attribute of a software system. They judge the software system based on Responsiveness, Usability, Security, Portability and other non-functional standards that are critical to the success of the software system. Example of nonfunctional requirement, “how fast does the website load?” Failing to meet non-functional requirements can result in systems that fail  to  satisfy  user  needs.  Non-  functional  Requirements  allows  you to  impose constraints  or  restrictions  on  the  design  of  the  system  across  the  various  agile backlogs.  Example,  the  site  should  load  in  3  seconds  when  the  number  of simultaneous users are > 10000. Description of non-functional requirements is just as critical as a functional requirement. 
 
 - Usability requirement 
 - Serviceability requirement 
@@ -548,587 +628,4 @@ Move the attributes and methods as high as possible in the hierarchy.
 
  Multiple inheritances:
 
-Avoid  excessive  use  of  multiple  inheritances.  One  way  of  getting  benefits  of multiple inheritances is to inherit from the most appropriate class and add an object of another class as an attribute. 
-
-Aggregation or a-part-of relationship: 
-
-It represents the situation where a class consists of several component classes. A class that is composed of other classes doesn’t behave like its parts. It behaves very difficultly.  The  major  properties  of  this  relationship  are  transitivity  and  anti symmetry. 
-
-The questions whose answers will determine the distinction between the part and whole relationships are: 
-
-- Does the part class belong to the problem domain? 
-- Is the part class within the system’s responsibilities? 
-- Does the part class capture more than a single value?( If not then 
-
-simply include it as an attribute of the whole class) 
-- Does  it  provide  a  useful  abstraction  in  dealing  with  the  problem domain? There are three types of aggregation relationships. They are: 
-
-Assembly:
-
-It is constructed from its parts and an assembly-part situation physically exists.
-
-Container:
-
-A physical whole encompasses but is not constructed from physical parts.
-
-Collection member:
-
-A conceptual whole encompasses parts that may be physical or conceptual. The container  and  collection  are  represented  by  hollow  diamonds  but  composition  is represented by solid diamond. 
-
-
-**ClassDiagram:**  
-
-In  software  engineering,  a  class  diagram  in  the  Unified  Modeling  Language (UML) is a type of static structure diagram that describes the structure of a system by showing  the  system's  classes,  their  attributes,  operations  (or  methods),  and  the relationships among the classes. It explains which class contains information. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.010.jpeg)
-
-Fig 4.1: Class Diagram 
-
-**Use Case Diagram:**  
-
-A use case diagram at its simplest is a representation of a user's interaction with the system and depicting the specifications of a use case. A use case diagram can portray the different types of users of a system and the various ways that they interact with the system. This type of diagram is typically used in conjunction with the textual use case and will often be accompanied by other types of diagrams as well.  
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.011.png)
-
-Fig 4.2: Usecase diagram 
-
-
- **Sequence Diagram:**  
-
-A sequence diagram is a kind of interaction diagram that shows how processes operate with one another and in what order. It is a construct of a Message Sequence Chart. A sequence diagram shows object interactions arranged in time sequence. It depicts the objects and classes involved in the scenario and the sequence of messages exchanged between the objects needed to carry out the functionality of the scenario. Sequence diagrams are typically associated with use case realizations in the Logical View of the system under development. Sequence diagrams are sometimes called event diagrams, event scenarios, and timing diagrams. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.012.png)
-
-Fig 4.3:Sequence diagram 
-
- **State Chart Diagram** 
-
-State chart diagram describes the flow of control from one state to another state. States are defined as a condition in which an object exists and it changes when some event is triggered. The most important purpose of State chart diagram is to model lifetime of an object from creation to termination. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.013.png)
-
-Fig 4.4:State chart diagram 
-
- **Activity Diagram:**  
-
-Activity  diagram  is  another  important  diagram  in  UML  to  describe  dynamic aspects of the system. It is basically a flow chart to represent the flow form one activity  to  another  activity.  The  activity  can  be  described  as  an  operation  of  the system. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.014.png)
-
-Fig 4.5:Activity diagram 
-
- **Data Flow Diagram:**  
-
-A DFD is a model for constructing and analyzing information processes. DFD illustrates the low of   information in a process depending upon the inputs and outputs. A DFD can also be referred to as a Process Model. A DFD demonstrates business or technical process with the support of the outside data saved, plus the data flowing from the process to another and the end results.  
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.015.png)
-
-Fig 4.6:Data flow Diagram 
-
-**ARCHITECTURE OF PROJECT** 
-
-The machine  learning  architecture defines  the  various  layers  involved  in the machine  learning cycle  and  involves  the  major  steps  being  carried  out  in  the transformation of raw data into training data sets capable for enabling the decision making of a system. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.016.png)
-
-Fig 4.7:Architecture diagram 
-
-
-5. **IMPLEMENTATION** 
-
-
-ALGORITHOMS:
-
-1.Logistic regression:-  
-
-Logistic regression is a supervised learning classification algorithm used to predict the probability of a target  variable. The nature of target or dependent variable is dichotomous, which means there would be only two possible classes. 
-
-In simple words, the dependent variable is binary in nature having data coded as either 1 (stands for success/yes) or 0 (stands for failure/no). 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.017.png)
-
-Fig 5.1 Logistic Regression Graph 
-
-2.KNNAlgorithom:-
-
-K Nearest Neighbour is a simple algorithm that stores all the available cases and classifies the new data or case based on a similarity measure. It is mostly used to classifies a data point based on how its neighbours are classified. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.018.png)
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.019.png)
-
-Fig 5.2 KNN Graph
-
-3.Decision Tree:-
-
-Decision  Tree  is  a Supervised  learning  technique that  can  be  used  for  both classification  and  Regression  problems,  but  mostly  it  is  preferred  for  solving Classification  problems.  It  is  a  tree-structured  classifier,  where internal  nodes represent the features of a dataset, branches represent the decision rules and each leaf node represents the outcome. 
-
-In a Decision tree, there are two nodes, which are the Decision Node and Leaf Node. Decision nodes are used to make any decision and have multiple branches, whereas Leaf nodes are the output of those decisions and do not contain any further branches.                      
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.020.png)
-
-Fig 5.3 Decision Tree 
-
-4.Random Forest:- 
-
-Random  forest  is  a supervised  learning  algorithm.  The  "forest" it  builds,  is  an ensemble of decision trees, usually trained with the “bagging” method. The general idea of the bagging method is that a combination of learning models increases the overall result. 
-
-Put simply: random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction. 
-
-5.Support Vector Machine** 
-
-A  Support  Vector  Machine  (SVM)  performs  classification  by  finding  the hyperplane that maximizes the margin between the two classes. The vectors (cases) that define the hyperplane are the support vectors. 
-
-A support vector machine is a supervised learning algorithm that sorts data into two categories. It is trained with a series of data already classified into two categories, building the model as it is initially trained. The task of an SVM algorithm is to determine which category a new data point belongs in. This makes SVM a kind of non-binary linear classifier.An SVM algorithm should not only place objects into categories, but have the margins between them on a graph as wide as possible. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.021.png)
-
-Fig 5.4 SVM 
-
-6.Neural Network:-
-
-The structure of the human brain inspires a Neural Network. It is essentially a Machine  Learning  model  (more  precisely,  Deep  Learning)  that  is  used  in unsupervised learning. A Neural Network is a web of interconnected entities known as nodes wherein each node is responsible for a simple computation. In this way, a Neural Network functions similarly to the neurons in the human brain 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.022.jpg)
-
-`  `Fig 5.5 Neural Networks 
-
-
-2. **CODING** 
-1.Logistic Regression:-
-
-from sklearn.linear\_model import Logistic Regression clf=LogisticRegression(random\_state=0,solver='lbfgs',multi\_class='multinomial' max\_iter=100) 
-
-clf.fit(X\_train,y\_train) 
-
-y\_pred=clf.predict(X\_test) 
-
-from sklearn.metricsimport accuracy\_score,precision\_score,recall\_score,confusion\_matrix print('Accuracy:',round(accuracy\_score(y\_test,y\_pred)\*100,2)) print('Precision:',round(precision\_score(y\_test,y\_pred)\*100,2))   
-
-print('Recall    :',round(recall\_score(y\_test,y\_pred)\*100,2))   
-
-print('Confusion Matrix: \n',confusion\_matrix(y\_pred,y\_test)) 
-
-2. KNN Algorithm:-
-
-from sklearn.neighbors import KNeighborsClassifier 
-
-from sklearn.model\_selection import cross\_val\_score 
-
-- creating odd list of K for KNN 
-
-neighbors = list(range(1,20,2)) 
-
-- empty list that will hold cv scores 
-
-cv\_scores = [] 
-
-for k in neighbors: 
-
-`     `knn = KNeighborsClassifier(n\_neighbors=k) 
-
-`     `scores = cross\_val\_score(knn, X\_train, y\_train, cv=5, scoring='accuracy')      cv\_scores.append(scores.mean())    
-
-- changing to misclassification error 
-
-MSE = [1 - x for x in cv\_scores] 
-
-- determining best k 
-
-optimal\_k = neighbors[MSE.index(min(MSE))] 
-
-print('\nThe optimal number of neighbors is %d.' % optimal\_k) 
-
-3. Decision Tree:- 
-
-from sklearn.tree import DecisionTreeClassifier      dtclf=DecisionTreeClassifier()  
-
-dtclf.fit(X\_train,y\_train) print('Accuracy:',round(accuracy\_score(y\_test,y\_pred)\*100,2)) print('Precision:',round(precision\_score(y\_test,y\_pred)\*100,2))   print('Recall    :',round(recall\_score(y\_test,y\_pred)\*100,2))   print('Confusion Matrix: \n',confusion\_matrix(y\_pred,y\_test)) 
-
-4. **Random  Forest** 
-
-from sklearn.ensemble import RandomForestClassifier 
-
-from math import sqrt 
-
-from sklearn.metrics import mean\_squared\_error rfclf=RandomForestClassifier(n\_estimators=100,max\_depth=2,random\_state=0) rfclf.fit(X\_train,y\_train) 
-
-y\_pred = rfclf.predict(X\_test) 
-
-5. **Support Vector Machine** 
-
-from sklearn import svm svmclf=svm.SVC(kernel='rbf',gamma='auto',decision\_function\_shape='ovo',prob bility=True) 
-
-svmclf.fit(X\_train,y\_train) 
-
-y\_pred = svmclf.predict(X\_test) print('Accuracy:',round(accuracy\_score(y\_test,y\_pred)\*100,2)) print('Precision:',round(precision\_score(y\_test,y\_pred)\*100,2))   print('Recall    :',round(recall\_score(y\_test,y\_pred)\*100,2))   print('Confusion Matrix: \n',confusion\_matrix(y\_pred,y\_test)) 
-
-6. **Neural Networks** 
-
-from sklearn.neural\_network import MLPClassifier 
-
-from sklearn.metrics import accuracy\_score 
-
-from sklearn.model\_selection import train\_test\_split 
-
-from sklearn.metrics import classification\_report,confusion\_matrix neural = MLPClassifier(max\_iter=350) 
-
-neural.fit(X\_train, y\_train) 
-
-y\_pred = neural.predict(X\_test) 
-
-neural\_score\_test = round(neural.score(X\_test, y\_test) \* 100, 2) print('Neural Test Score: \n', neural\_score\_test) print('Accuracy:',round(accuracy\_score(y\_test,y\_pred)\*100,2)) print('Precision:',round(precision\_score(y\_test,y\_pred)\*100,2)) print('Recall    :',round(recall\_score(y\_test,y\_pred)\*100,2))   print('Confusion Matrix: \n',confusion\_matrix(y\_pred,y\_test)) 
-
-import pickle  pickle.dump(clf,open('log.pkl','wb')) pickle.dump(classifier,open('knn.pkl','wb')) pickle.dump(dtclf,open('decisiontree.pkl','wb')) pickle.dump(rfclf,open('randomforest.pkl','wb')) pickle.dump(nbclf,open('navebais.pkl','wb')) 
-
-pickle.dump(svmclf,open('svm.pkl','wb')) pickle.dump(gbclass,open('gbost.pkl','wb')) pickle.dump(neural,open('neural.pkl','wb')) 
-
-7. **Web App** 
-
-import streamlit as st 
-
-import pickle  
-
-log=pickle.load(open('log.pkl','rb')) knn=pickle.load(open('knn.pkl','rb')) decisiontree=pickle.load(open('decisiontree.pkl','rb')) randomforest=pickle.load(open('randomforest.pkl','rb')) naivebayes=pickle.load(open('navebais.pkl','rb')) svm=pickle.load(open('svm.pkl','rb')) neural=pickle.load(open('neural.pkl','rb')) 
-
-def classify(num,t): 
-
-`     `if (num==1 and t==1): return "The Patient is likely has liver disease";      else : return "The Patient   is likely not having liver disease"; 
-
-def main(): 
-
-`     `st.title("Liver disease Predection") 
-
-`     `html\_temp = """ 
-
-`     `<div style="background-color:teal ;padding:10px"> 
-
-`     `<h2 style="color:white;text-align:center;">Liver disease Predection</h2>      </div> 
-
-""" 
-
-st.markdown(html\_temp, unsafe\_allow\_html=True) 
-
-activities=['LogisticRegression','KNN','Decisiontree','Randomforest','naivebayes','SV M','Neural networks'] 
-
-option=st.sidebar.selectbox('Which model would you like to use?',activities) st.subheader(option) 
-
-`     `age=st.slider("Enter   age",1,100) 
-
-`     `gender = st.radio("Gender",("Male","Female")) 
-
-`     `Total\_Bilirubin=st.slider('Total\_Bilirubin', 0, 75) 
-
-`     `Direct\_Bilirubin=st.slider('Direct\_Bilirubin', 0, 20) 
-
-`     `Alkaline\_Phosphotase=st.slider('Alkaline\_Phosphotase ', 0, 2100) 
-
-`     `Alamine\_Aminotransferase=st.slider('Alamine\_Aminotransferase ', 0, 2000) 
-
-`     `Aspartate\_Aminotransferase=st.slider('Aspartate\_Aminotransferase  ',  0, 5000) 
-
-Total\_Protiens=st.slider('Total\_Protiens ', 0, 10) 
-
-Albumin=st.slider('Albumin ', 0, 6) Albumin\_and\_Globulin\_Ratio=st.slider('Albumin\_and\_Globulin\_Ratio  ',  0, 
-
-\5) 
-
-`     `if gender=="Female":          gender1=1 
-
-`         `gender2=0 
-
-`     `else: 
-
-`         `gender1=0 
-
-`         `gender2=1 
-
-inputs=[[age,Total\_Bilirubin,Direct\_Bilirubin,Alkaline\_Phosphotase,Alamine\_Am inotransferase, 
-
-Aspartate\_Aminotransferase,Total\_Protiens,Albumin,Albumin\_and\_Globulin\_Ratio,g ender1,gender2]] 
-
-`     `t=(age!=0  and  Total\_Bilirubin!=0  and  Direct\_Bilirubin!=0  and Alkaline\_Phosphotase!=0and Aspartate\_Aminotransferase!=0andTotal\_Protiens!=0andAlbumin!=0andAlbumin\_an d\_Globulin\_Ratio!=0) 
-
-`     `if st.button('Classify'): 
-
-`         `if option=='Logistic Regression': 
-
-`             `st.success(classify(log.predict(inputs),t)) 
-
-`         `elif option=='KNN': 
-
-`             `st.success(classify(knn.predict(inputs),t)) 
-
-`         `elif option=='Decision tree': 
-
-`             `st.success(classify(decisiontree.predict(inputs),t))          elif option=='Random forest': 
-
-`             `st.success(classify(randomforest.predict(inputs),t))          elif option=='naive bayes': 
-
-`             `st.success(classify(naivebayes.predict(inputs),t)) 
-
-`         `elif option=='svm': 
-
-`             `st.success(classify(svm.predict(inputs),t)) 
-
-`         `elif option=='Neural networks': 
-
-`             `st.success(classify(neural.predict(inputs),t))     
-
-if \_\_name\_\_=='\_\_main\_\_':      main() 
-
-**6.TESTING** 
-
-**6.1 SOFTWARE TESTING Testing** 
-
-Testing is a process of executing a program with the aim of finding error. To make our software perform well it should be error free. If testing is done successfully it will remove all the errors from the software. 
-
-**6.1.1 Types of Testing**
-
-1. White Box Testing 
-1. Black Box Testing 
-1. Unit testing 
-1. Integration Testing 
-1. Alpha Testing 
-1. Beta Testing 
-1. Performance Testing and so on 
-
-**White Box Testing**
-
-Testing  technique  based  on  knowledge  of  the  internal  logic  of  an application's  code  and  includes  tests  like  coverage  of  code  statements, branches, paths, conditions. It is performed by software developers 
-
-**Black Box Testing**
-
-A  method  of  software  testing  that  verifies  the  functionality  of  an application  without  having  specific  knowledge  of  the  application's code/internal structure. Tests are based on requirements and functionality. 
-
-**Unit Testing**
-
-Software verification and validation method in which a programmer tests  if  individual  units of  source  code  are  fit  for  use.  It  is  usually conducted by the development team. 
-
-**Integration Testing**
-
-The phase in software testing in which individual software modules are combined and tested as a group. It is usually conducted by testing teams. 
-
-**Alpha Testing**
-
-Type  of  testing  a  software  product  or  system  conducted  at  the developer's site. Usually it is performed by the end users. 
-
-**Beta Testing**
-
-Final testing before releasing application for commercial purpose. It is typically done by end- users or others. 
-
-**Performance Testing**
-
-Functional testing conducted to evaluate the compliance of a system or component  with  specified  performance  requirements.  It  is  usually conducted by the performance engineer. 
-
-**Black Box Testing**
-
-Blackbox testing is testing the functionality of an application without knowing  the  details  of  its  implementation  including  internal  program structure, data structures etc. Test cases for black box testing are created based  on  the  requirement  specifications.  Therefore,  it  is  also  called  as specification-based testing. Fig.4.1 represents the black box testing: 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.025.jpg)
-
-Fig.6.1:Black Box Testing 
-
-When applied to machine  learning models, black  box testing would mean testing machine learning models without knowing the internal details such as features of the machine learning 
-
-model,  the  algorithm  used  to  create  the  model  etc.  The  challenge, however, is to verify the test outcome against the expected values that are known beforehand. 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.026.jpg)
-
-Fig.6.2:Black Box Testing for Machine Learning algorithms 
-
-The  above  Fig.4.2  represents  the  black  box  testing  procedure  for machine learning algorithms.
-
-Fig.6.3:Black box Testing
-
-
-|**Input** |**Actual Output** |**Predicted Output** |
-| - | :- | :- |
-|[26,1,25,13,1002,800,2000,5,3,1] |0 |0 |
-|[60,0,60,25,500,600,1005,6,2,1] |1 |1 |
-
-The model gives out the correct output when different inputs are given which are mentioned in Table 6.3. Therefore the program is said to be executed as expected or correct program 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.027.png)
-
-Fig 6.4 Testing 
-
-In  the  work,  we  utilized  some  factual  estimations  that  measure  the  test execution of various classification algorithms. The performance of the classification methods  was  assessed  by  various  evaluation  procedures,  for  example,  accuracy, precision, recall and f1 measure. Consequently, the exhibition evaluation variables are determined by the confusion matrix. Here, 
-
-**True Positives (TP)** - These are the correctly predicted positive values which means that the value of actual class is yes and the value of predicted class is also yes. E.g. if actual class value indicates that this passenger survived and predicted class tells you the same thing. 
-
-**True  Negatives  (TN)** -  These  are  the  correctly  predicted  negative  values which means that the value of actual class is no and value of predicted class is also no. E.g. if actual class says this passenger did not survive and predicted class tells you the same thing. False  positives  and  false  negatives,  these  values  occur  when  your  actual  class contradicts with the predicted class. 
-
-**False Positives (FP)** – When actual class is no and predicted class is yes. E.g. if actual class says this passenger did not survive but predicted class tells you that this passenger will survive. 
-
-**False Negatives (FN)** – When actual class is yes but predicted class in no. E.g. if actual class value indicates that this passenger survived and predicted class tells you that passenger will die. Once  you  understand  these  four  parameters  then  we  can  calculate  Accuracy, Precision, Recall and F1 score. 
-
-**Accuracy** - Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations. One may think that, if we have high accuracy then our model is best. Yes, accuracy is a great measure but only  when  you  have  symmetric  datasets  where  values  of  false  positive  and  false negatives  are  almost  same.  Therefore,  you  have  to  look  at  other  parameters  to evaluate the performance of your model. For our model, we have got 0.803 which means our model is approx. 80% accurate. 
-
-Accuracy = TP+TN/TP+FP+FN+TN 
-
-**Precision** - Precision is the ratio of correctly predicted positive observations to the total predicted positive observations. The question that this metric answer is of all passengers  that  labeled  as  survived,  how  many  actually  survived?  High  precision relates to the low false positive rate. We have got 0.788 precision which is pretty good. 
-
-Precision = TP/TP+FP 
-
-**Recall (Sensitivity)**  -  Recall  is  the  ratio  of  correctly  predicted  positive observations to the all observations in actual class - yes. The question recall answers is: Of all the passengers that truly survived, how many did we label? We have got recall of 0.631 which is good for this model as it’s above 0.5. 
-
-Recall = TP/TP+FN 
-
-**F1 score** - F1 Score is the weighted average of Precision and Recall. Therefore, this score takes both false positives and false negatives into account. Intuitively it is not as easy to understand as accuracy, but F1 is usually more useful than accuracy, 
-
-especially  if you have  an uneven class distribution. Accuracy works best if false positives and false negatives have similar cost. If the cost of false positives and false negatives are very different, it’s better to look at both Precision and Recall. In our case, F1 score is 0.701. 
-
-F1 Score = 2\*(Recall \* Precision) / (Recall + Precision) 
-
-**Confusion Matrix**  
-
-A confusion matrix is a tabular summary of the number of correct and incorrect predictions  made  by  a  classifier.  It  is  used  to  measure  the  performance  of  a classification model. 
-
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.028.png)
- 
- Fig 6.5 Confusion Matrix 
- 
-
-True Positive (TP): The result of prediction correctly identifies that a patient has liver disease.  
-
-False Positive (FP): The result of prediction incorrectly identifies that a patient has liver disease. True  
-
-Negative (TN): The result of prediction correctly rejects that a patient has liver disease.  
-
-False Negative (FN): The result of prediction incorrectly rejects that a patient has liver disease.  
-
-**Logistic Regression** 
-
-Accuracy : 76.07 Precision: 75.65 Recall    : 100.0 f1 score : 86.14 Confusion Matrix:    [[87 28] [ 0   2]] 
-
-**KNN** 
-
-Accuracy : 75.21 Precision: 77.36 Recall    : 94.25 f1 score : 84.97 Confusion Matrix:    [[82 24] [ 5   6]] 
-
-**Decision Tree** 
-
-Accuracy : 71.79 Precision: 84.62 Recall    : 75.86 f1 score : 80.0 Confusion Matrix:    [[66 12] [21 18]] 
-
-**Random Forest** 
-
-Accuracy : 74.36 Precision: 74.36 Recall    : 100.0 f1 score : 85.29 Confusion Matrix:    [[87 30] [ 0   0]] 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.029.png)
-
-Fig 6.6 Metrics Table  
-
-7. **RESULTS AND DISCUSSIONS** \
-
-1.**Import required package and extracting the data set 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.030.png)
-
-Fig.7.1 import modules 
-
-2. **Data Processing 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.031.png)
-
-Fig.7.2 Data Processing 
-
-3. **Data Visualization  
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.032.png)
-
-Fig.7.3 Data visualization 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.033.png)
-
-Fig.7.4 Data visualization
-
-4. **Feature Scaling 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.034.png)
-
-Fig.7.5 Feature Scaling 
-
-
-
-
-5. **MODELS** 
-
-
-1.**Logistic Regression:- 
-
-   ![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.035.png)
-
-Fig.7.6 Logistic regression 
-
-2.**Decision Tree:-
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.036.png)
-
-Fig.7.7 Decision Tree 
-
-3.**Random Forest 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.037.png)
-
-Fig.7.8 Random Forest  
-
-4.**SVM:- 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.038.png)
-
-Fig.7.9 Svm 
-
-5.**Neural Networks 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.039.png)
-
-Fig.7.10 Neural Networks  
-
-6.**KNN
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.040.png)
-
-Fig.7.11 Knn
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.041.png)
-
-Fig.7.12. Output 
-
-![]( ReadmeImages/Aspose.Words.e4bfd82e-acc5-43da-8479-c6d62d68f870.042.png)
-
-Fig.7.13. Output
-
-
-
-8. **CONCLUSIONS AND FUTURE SCOPE** 
-
-The dataset for this problem is the ILPD (Indian Liver Patient Dataset) taken from the UCI Machine Learning Repository. Region specified in this dataset is of Andhra Pradesh of year 2017. 
-
-Initially, the data set was explored and made ready to be fed into the classifiers. This was achieved by removing some rows containing null values, transforming some columns  which  were  showing  skewness  and  using  appropriate  methods  (one-hot encoding) to convert the labels so that they can be useful for classification purposes. Performance metrics on which the models would be evaluated were decided. The data  set was then split into a training and testing set.  
-
-Then the training data is fed to the different models Logistic Regression, KNN, Decision Tree, Random Forest, Support Vector Machine, Neural Networks. And then these models are tested with the testing data using different measuring metrics like accuracy, precision, recall, f1- score. Then the models are converted into pickle file and deployed in web using Heroku Platform as a Service.   
-
-This project aims to predict the liver disease on the basis of the symptoms. The project is designed in such a way that the system takes symptoms from the user as input  and  produces  output  i.e.  predict  disease.  In  conclusion,  for  disease  risk modelling, the accuracy of risk prediction depends on the diversity feature of the hospital data. 
-
-As our dataset is small it’s training dataset is similar to test dataset so we cannot rely on this model for predicting accuracy for large dataset. We need more precised data set containing larger values and attributes to classify values and get best accuracy 
-
-
-
-
-9. **REFERENCES** 
-
-1. K. Sumeet, J.J. Larson, B. Yawn, T.M. Therneau, W.R. Kim, Underestimation of liver-related mortality in the United States. Gastroenterology;(2013) 145:375–382, e371–372.  
-2. A.A. Mokdad, A.D. Lopez, S. Shahraz, R. Lozano, A.H. Mokdad, J. Stanaway, et al, Liver cirrhosis mortality in 187 countries between 1980 and 2010: a systematic analysis. BMC Med 2014; 12:145.  
-3. Byass, Peter, The global burden of liver disease: a challenge for methods and for public health. BMC medicine 12.1 (2014); 159.  
-4. L. A. Auxilia, Accuracy Prediction Using Machine Learning Techniques for 
-Indian  Patient  Liver  Disease.  2018  2nd  International  Conference  on  Trends  in Electronics and Informatics (ICOEI). IEEE (2018) 
-5. Hashem, M. Esraa, S. Mai, A study of support vector machine algorithm for liver disease diagnosis. American Journal of Intelligent Systems 4.1 (2014); 9-14.  
-6. P. Sajda, "Machine learning for detection and diagnosis of disease." Annu. Rev.Biomed. Eng. 8 (2006); 537-565.  
-7. UCI  Machine  Learning  Repository.  ILPD  (Indian  Liver  Patient  Dataset) DataSet.https://archive.ics.uci.edu/ml/datasets/ILPD+(Indian+Liver +Patient+Dataset)  
-8. Logistic Regression, Retrieve from: HTTPS://WWW.SAEDSAYAD.COM/LOGISTIC  \_REGRESSION.HTM,  LAST Accessed: 5 Octobor,2020 
-9. L.  Breiman,  Random  Forests.  Machine  Learning,  45(1),  (2001);  5–32.https://doi.org/10.1023/A:1010933404324  
-10. Decision Trees, Retrieve from: https://dataaspirant.com/2017/01/30/how-decision-treealgorithm-works/, LastAccessed: 5 Octobor,2020 
-11. Support vector machine, Retrieve from:  http://www.statsoft.com/textbook/support-vectormachines 
-11. V. Vapnik, I. Guyon, T. H.-M, Learn, and undefined 1995. Support vector machines. statweb.stanford.edu (1995).  
-13. Zhang  M,  Zhou  Z,  "ML-KNN:  A  lazy  learning  approach  to  multi-label learning." Pattern recognition40.7:(2007); 2038-2048.  
+Avoid  excessive  use  of  multiple  inheritances.  One  way  of  
